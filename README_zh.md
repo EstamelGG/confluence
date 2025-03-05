@@ -69,7 +69,7 @@ docker exec confluence-srv java -jar /var/agent/atlassian-agent.jar \
 
 ## 初始化数据库
 
-使用 yml 中的confluence的用户名与密码进行连接。
+使用 yml 中的 `root` 用户与密码进行连接。主机名为 `mysql-confluence`
 
 ## 破解 confluence 的插件
 
