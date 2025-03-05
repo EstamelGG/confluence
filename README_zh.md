@@ -50,15 +50,9 @@
     passwd=123456
 ```
 
-## 使用 docker 启动
+## 安装
 
-- 启动 confluence
-
-```
-    docker volume create confluence_home_data && docker network create confluence-network && docker run -p 8090:8090 -v confluence_home_data:/var/confluence --network confluence-network --name confluence-srv -e TZ='Asia/Shanghai' haxqer/confluence:9.2.1
-```
-
-- 然后配置你的数据库:
+选择 "产品安装"，然后根据页面显示的 "服务器ID" 进行破解。
 
 
 ## 破解 confluence
@@ -70,8 +64,12 @@ docker exec confluence-srv java -jar /var/agent/atlassian-agent.jar \
     -m Hello@world.com \
     -n Hello@world.com \
     -o your-org \
-    -s you-server-id-xxxx
+    -s [服务器ID]
 ```
+
+## 初始化数据库
+
+使用 yml 中的confluence的用户名与密码进行连接。
 
 ## 破解 confluence 的插件
 
